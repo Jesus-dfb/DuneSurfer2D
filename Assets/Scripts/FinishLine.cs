@@ -5,7 +5,7 @@ public class FinishLine : MonoBehaviour
 {
     [SerializeField] private float reloadDelay = 1f; // Delay before reloading the scene
     [SerializeField] private ParticleSystem finishEffect; // Particle effect to play when the player crosses the finish line
-    [SerializeField] private int lastLevel = 4;
+    [SerializeField] private int lastLevel = 3;
     bool hasFinished;
 
     void OnTriggerEnter2D(Collider2D other)
@@ -29,7 +29,7 @@ public class FinishLine : MonoBehaviour
             {
                 finishEffect.Play(); // Play the finish effect particles
             }
-            
+
             Invoke(nameof(NextLevel), reloadDelay); // Reload the scene after the specified delay
 
         }
@@ -59,7 +59,7 @@ public class FinishLine : MonoBehaviour
         {
             SceneManager.LoadScene($"Level{nextLevel}"); // Load the next level
         }
-        
+
     }
 
     bool TryGetCurrentLevelNumber(out int levelNumber)

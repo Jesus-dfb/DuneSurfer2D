@@ -35,10 +35,10 @@ public class PowerUpManager : MonoBehaviour
                 if (timeLeft <= 0)
                 {
                     playerController.DeactivatePowerUp(powerUpData);
-                }            
+                }
             }
         }
-        
+
     }
 
     void OnTriggerEnter2D(Collider2D other)
@@ -46,7 +46,7 @@ public class PowerUpManager : MonoBehaviour
         if (other.CompareTag("Player") && powerUpSpriteRenderer.enabled)
         {
             powerUpSpriteRenderer.enabled = false;
-            playerController.ApplyPowerUp(powerUpData);            
+            playerController.ApplyPowerUp(powerUpData);
         }
     }
 

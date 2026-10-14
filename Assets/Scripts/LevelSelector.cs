@@ -4,6 +4,13 @@ using UnityEngine.UI;
 
 public class LevelSelector : MonoBehaviour
 {
+    [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
+    static void ResetUnlockedLevelsOnGameStart()
+    {
+        PlayerPrefs.SetInt("UnlockedLevel", 1);
+        PlayerPrefs.Save();
+    }
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -19,11 +26,8 @@ public class LevelSelector : MonoBehaviour
         for (int i = 0; i < levels.childCount; i++)
         {
             Button levelButton = levels.GetChild(i).GetComponent<Button>();
-             // Enable the button if the level is unlocked
+            // Enable the button if the level is unlocked
             levelButton.interactable = (i < unLockedLevel);
         }
-
     }
-
- 
 }

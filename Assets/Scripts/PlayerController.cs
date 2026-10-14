@@ -8,11 +8,12 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float bootsSpeed = 35f;
     [SerializeField] private ParticleSystem snowEffect;
     [SerializeField] private ScoreManager scoreManager;
-    
-    SurfaceEffector2D surfaceEffector2D;
+
+    SurfaceEffector2D[] surfaceEffectors;
+    float[] surfaceDirections;
     Rigidbody2D rb;
 
-    float baseSpeed;    
+    float baseSpeed;
     InputAction moveAction;
     Vector2 moveInput;
     float previousRotation; // Store the previous rotation of the player
@@ -22,7 +23,7 @@ public class PlayerController : MonoBehaviour
     int activePowerUpsCount; // Track the number of active power-ups
 
     bool isReady;
-    
+
     private bool canControlPlayer = true; // Flag to control player input
 
     public bool CanControlPlayer { get => canControlPlayer; set => canControlPlayer = value; }
@@ -33,7 +34,7 @@ public class PlayerController : MonoBehaviour
         ActivateSelectedCharacter();
 
         rb = GetComponent<Rigidbody2D>();
-        surfaceEffector2D = FindAnyObjectByType<SurfaceEffector2D>();
+        surfaceEffectors = FindObjectsByType<SurfaceEffector2D>();
 
         if (scoreManager == null)
         {
@@ -52,7 +53,7 @@ public class PlayerController : MonoBehaviour
             return;
         }
 
-        if (surfaceEffector2D == null)
+        if (surfaceEffectors.Length == 0)
         {
             Debug.LogError("SurfaceEffector2D not found in this scene. Check that the level floor has a SurfaceEffector2D component.");
             enabled = false;
@@ -66,7 +67,15 @@ public class PlayerController : MonoBehaviour
             return;
         }
 
-        baseSpeed = surfaceEffector2D.speed; // Store the initial speed of the SurfaceEffector2D
+        baseSpeed = Mathf.Abs(surfaceEffectors[0].speed);
+        surfaceDirections = new float[surfaceEffectors.Length];
+
+        for (int i = 0; i < surfaceEffectors.Length; i++)
+        {
+            float direction = Mathf.Sign(surfaceEffectors[i].speed);
+            surfaceDirections[i] = direction == 0 ? 1f : direction;
+        }
+
         moveAction.Enable();
         isReady = true;
     }
@@ -86,17 +95,17 @@ public class PlayerController : MonoBehaviour
         PlayerPrefs.SetInt("SelectedCharacter", selectedCharacter);
         PlayerPrefs.Save();
     }
-    
+
 
     // Update is called once per frame
     void Update()
     {
         if (!canControlPlayer || !isReady) return; // If player input is disabled, exit the method
-        
-        PlayerTorque();     
+
+        PlayerTorque();
         BoostPlayer();
-        CalculateFlips();        
-        
+        CalculateFlips();
+
     }
 
     /// <summary>
@@ -105,24 +114,24 @@ public class PlayerController : MonoBehaviour
     private void CalculateFlips()
     {
         // Get the current rotation of the player in degrees
-        float currentRotation = transform.rotation.eulerAngles.z; 
+        float currentRotation = transform.rotation.eulerAngles.z;
         // Calculate the change in rotation since the last frame
-        totalRotation += Mathf.DeltaAngle(previousRotation, currentRotation); 
-        
-        if (Math.Abs(totalRotation)> 340)
+        totalRotation += Mathf.DeltaAngle(previousRotation, currentRotation);
+
+        if (Math.Abs(totalRotation) > 340)
         {
             flipCount++; // Increment the flip count if the total rotation exceeds 360 degrees
-            
+
             if (scoreManager != null)
             {
-                scoreManager.AddScore(flipCount*100);
+                scoreManager.AddScore(flipCount * 100);
             }
 
             totalRotation = 0; // Reset the total rotation for the next flip            
         }
 
         previousRotation = currentRotation; // Update the previous rotation for the next frame
-        
+
     }
 
     /// <summary>
@@ -132,7 +141,7 @@ public class PlayerController : MonoBehaviour
     {
         if (moveAction == null || rb == null) return;
 
-        moveInput = moveAction.ReadValue<Vector2>(); 
+        moveInput = moveAction.ReadValue<Vector2>();
         if (moveInput.x < 0)
         {
             rb.AddTorque(torqueAmount);
@@ -141,22 +150,18 @@ public class PlayerController : MonoBehaviour
         {
             rb.AddTorque(-torqueAmount);
         }
-        
+
     }
 
     void BoostPlayer()
     {
-        if (surfaceEffector2D == null) return;
+        if (surfaceEffectors == null || surfaceEffectors.Length == 0) return;
 
-        //Increase the player's speed when the up arrow key is pressed
-        //Surface Efector speed is increased to bootsSpeed
-        if (moveInput.y > 0)
-        {     
-            surfaceEffector2D.speed = bootsSpeed; 
-        }
-        else
-        {         
-            surfaceEffector2D.speed = baseSpeed; // Return to normal speed
+        float targetSpeed = moveInput.y > 0 ? bootsSpeed : baseSpeed;
+
+        for (int i = 0; i < surfaceEffectors.Length; i++)
+        {
+            surfaceEffectors[i].speed = surfaceDirections[i] * targetSpeed;
         }
     }
 
@@ -165,8 +170,8 @@ public class PlayerController : MonoBehaviour
     {
         int layerIndex = LayerMask.NameToLayer("Floor");
         if (collision.gameObject.layer == layerIndex)
-        {            
-            snowEffect.Play();            
+        {
+            snowEffect.Play();
         }
     }
 
@@ -175,7 +180,7 @@ public class PlayerController : MonoBehaviour
     {
         int layerIndex = LayerMask.NameToLayer("Floor");
         if (collision.gameObject.layer == layerIndex)
-        {            
+        {
             snowEffect.Stop();
         }
     }
@@ -192,14 +197,11 @@ public class PlayerController : MonoBehaviour
 
     public void DeactivatePowerUp(PowerUpScriptableObject powerUpData)
     {
-        activePowerUpsCount--; // Decrement the count of active power-ups
-        if (activePowerUpsCount == 0)
+        activePowerUpsCount = Mathf.Max(0, activePowerUpsCount - 1);
+        if (powerUpData.PowerUpType == "Speed")
         {
-            if (powerUpData.PowerUpType == "Speed")
-            {
-                baseSpeed -= powerUpData.PowerUpValue; // Decrease the base speed by the power-up value
-                bootsSpeed -= powerUpData.PowerUpValue; // Decrease the boots speed by the power-up value
-            }
+            baseSpeed -= powerUpData.PowerUpValue;
+            bootsSpeed -= powerUpData.PowerUpValue;
         }
     }
 }

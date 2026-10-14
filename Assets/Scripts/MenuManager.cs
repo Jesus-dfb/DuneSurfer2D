@@ -11,7 +11,7 @@ public class MenuManager : MonoBehaviour
     public void PlayGame()
     {
         LoadScene("Level1");
-        
+
     }
 
     /// <summary>
@@ -27,14 +27,14 @@ public class MenuManager : MonoBehaviour
     /// </summary>
     public void GoToMenu()
     {
-        LoadScene("Menu");        
+        LoadScene("Menu");
     }
 
     /// <summary>
     /// Load the character selection scene when the Select Character button is clicked
     /// </summary>
     public void GoToSelectCharacter()
-    {        
+    {
         LoadScene("SelectCharacter");
     }
 
@@ -69,10 +69,10 @@ public class MenuManager : MonoBehaviour
     /// </summary>
     /// <param name="characterIndex"></param>
     public void SelectCharacter(int characterIndex)
-    {        
+    {
         PlayerPrefs.SetInt("SelectedCharacter", characterIndex);
         PlayerPrefs.Save();
-        
+
         LoadScene("Menu");
     }
 

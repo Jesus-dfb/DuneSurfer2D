@@ -3,10 +3,10 @@ using TMPro;
 
 public class ScoreManager : MonoBehaviour
 {
-    [SerializeField] TextMeshProUGUI scoreText; 
+    [SerializeField] TextMeshProUGUI scoreText;
 
     public void AddScore(int score)
     {
-        scoreText.text = score.ToString("00000"); 
+        scoreText.text = score.ToString("00000");
     }
 }
