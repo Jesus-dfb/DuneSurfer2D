@@ -1,0 +1,587 @@
+fileFormatVersion: 2
+guid: 297f6f7fa170dda4c9355a74bad1b9e3
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3695540988059905190
+    second: PowerUp_Lightning_0
+  - first:
+      213: 5739102511933546378
+    second: PowerUp_Lightning_1
+  - first:
+      213: -6604569318630303831
+    second: PowerUp_Lightning_2
+  - first:
+      213: -6484886286898661086
+    second: PowerUp_Lightning_3
+  - first:
+      213: 7509953522017937908
+    second: PowerUp_Lightning_4
+  - first:
+      213: -4188262372910769199
+    second: PowerUp_Lightning_5
+  - first:
+      213: 8231825319253582419
+    second: PowerUp_Lightning_6
+  - first:
+      213: 5760511791270313607
+    second: PowerUp_Lightning_7
+  - first:
+      213: 2263074915183354847
+    second: PowerUp_Lightning_8
+  - first:
+      213: -2475722693217456205
+    second: PowerUp_Lightning_9
+  - first:
+      213: 6334283368151863689
+    second: PowerUp_Lightning_10
+  - first:
+      213: 8789610653100448778
+    second: PowerUp_Lightning_11
+  - first:
+      213: -6839864955322751026
+    second: PowerUp_Lightning_12
+  - first:
+      213: -517786017204818780
+    second: PowerUp_Lightning_13
+  - first:
+      213: -1832858263008109729
+    second: PowerUp_Lightning_14
+  - first:
+      213: -642686390501382021
+    second: PowerUp_Lightning_15
+  - first:
+      213: 4830619495787711099
+    second: PowerUp_Lightning_16
+  - first:
+      213: 9021203472672081401
+    second: PowerUp_Lightning_17
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationMethod: 0
+  spriteTessellationDetail: -1
+  spriteGeometrySubdivision: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: PowerUp_Lightning_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1231
+        height: 1254
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6ace436e2f2394330800000000000000
+      internalID: 3695540988059905190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PowerUp_Lightning_1
+      rect:
+        serializedVersion: 2
+        x: 1149
+        y: 1078
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a8fd959d35365af40800000000000000
+      internalID: 5739102511933546378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PowerUp_Lightning_2
+      rect:
+        serializedVersion: 2
+        x: 123
+        y: 1014
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a7d89c723bd754a0800000000000000
+      internalID: -6604569318630303831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PowerUp_Lightning_3
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 941
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2297a9cc74e0106a0800000000000000
+      internalID: -6484886286898661086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PowerUp_Lightning_4
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 869
+        width: 8
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f9a29750f6b83860800000000000000
+      internalID: 7509953522017937908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PowerUp_Lightning_5
+      rect:
+        serializedVersion: 2
+        x: 1153
+        y: 861
+        width: 8
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1dbd48cef8d40e5c0800000000000000
+      internalID: -4188262372910769199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PowerUp_Lightning_6
+      rect:
+        serializedVersion: 2
+        x: 1160
+        y: 861
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3522d2783815d3270800000000000000
+      internalID: 8231825319253582419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PowerUp_Lightning_7
+      rect:
+        serializedVersion: 2
+        x: 1163
+        y: 666
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 78ebd1324f271ff40800000000000000
+      internalID: 5760511791270313607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PowerUp_Lightning_8
+      rect:
+        serializedVersion: 2
+        x: 1163
+        y: 650
+        width: 6
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fd3e99325ae086f10800000000000000
+      internalID: 2263074915183354847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PowerUp_Lightning_9
+      rect:
+        serializedVersion: 2
+        x: 952
+        y: 385
+        width: 219
+        height: 253
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3bf6664d35774add0800000000000000
+      internalID: -2475722693217456205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PowerUp_Lightning_10
+      rect:
+        serializedVersion: 2
+        x: 1182
+        y: 306
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9815b51b925e7e750800000000000000
+      internalID: 6334283368151863689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PowerUp_Lightning_11
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 231
+        width: 11
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a0c9a04d158faf970800000000000000
+      internalID: 8789610653100448778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PowerUp_Lightning_12
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 210
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec72852ff0be311a0800000000000000
+      internalID: -6839864955322751026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PowerUp_Lightning_13
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 103
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4aca7d65c5470d8f0800000000000000
+      internalID: -517786017204818780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PowerUp_Lightning_14
+      rect:
+        serializedVersion: 2
+        x: 1181
+        y: 105
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f5b13c5ee116096e0800000000000000
+      internalID: -1832858263008109729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PowerUp_Lightning_15
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 86
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b78ef280228b417f0800000000000000
+      internalID: -642686390501382021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PowerUp_Lightning_16
+      rect:
+        serializedVersion: 2
+        x: 1190
+        y: 66
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b7ac08376dec90340800000000000000
+      internalID: 4830619495787711099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PowerUp_Lightning_17
+      rect:
+        serializedVersion: 2
+        x: 1161
+        y: 45
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f5c32313c0c13d70800000000000000
+      internalID: 9021203472672081401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      PowerUp_Lightning_0: 3695540988059905190
+      PowerUp_Lightning_1: 5739102511933546378
+      PowerUp_Lightning_10: 6334283368151863689
+      PowerUp_Lightning_11: 8789610653100448778
+      PowerUp_Lightning_12: -6839864955322751026
+      PowerUp_Lightning_13: -517786017204818780
+      PowerUp_Lightning_14: -1832858263008109729
+      PowerUp_Lightning_15: -642686390501382021
+      PowerUp_Lightning_16: 4830619495787711099
+      PowerUp_Lightning_17: 9021203472672081401
+      PowerUp_Lightning_2: -6604569318630303831
+      PowerUp_Lightning_3: -6484886286898661086
+      PowerUp_Lightning_4: 7509953522017937908
+      PowerUp_Lightning_5: -4188262372910769199
+      PowerUp_Lightning_6: 8231825319253582419
+      PowerUp_Lightning_7: 5760511791270313607
+      PowerUp_Lightning_8: 2263074915183354847
+      PowerUp_Lightning_9: -2475722693217456205
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

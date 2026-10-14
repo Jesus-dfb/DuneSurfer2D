@@ -1,0 +1,90 @@
+using UnityEngine;
+using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
+
+public class MenuManager : MonoBehaviour
+{
+
+    /// <summary>
+    /// Load the game scene Level1 when the Play button is clicked
+    /// </summary>
+    public void PlayGame()
+    {
+        LoadScene("Level1");
+        
+    }
+
+    /// <summary>
+    /// Quit the application when the Quit button is clicked
+    /// </summary>
+    public void QuitGame()
+    {
+        Application.Quit();
+    }
+
+    /// <summary>
+    /// Load the main menu scene when the Menu button is clicked
+    /// </summary>
+    public void GoToMenu()
+    {
+        LoadScene("Menu");        
+    }
+
+    /// <summary>
+    /// Load the character selection scene when the Select Character button is clicked
+    /// </summary>
+    public void GoToSelectCharacter()
+    {        
+        LoadScene("SelectCharacter");
+    }
+
+    /// <summary>
+    /// Load the credits scene when the Credits button is clicked
+    /// </summary>
+    public void GoToCredits()
+    {
+        LoadScene("Credits");
+    }
+
+    /// <summary>
+    /// Load the level selection scene when the Select Level button is clicked
+    /// </summary>
+    public void GoToSelectLevel()
+    {
+        LoadScene("SelectLevel");
+    }
+
+    /// <summary>
+    /// Load the specified level scene when the Select Level button is clicked
+    /// </summary>
+    /// <param name="level"></param>
+    public void GoToLevel(int level)
+    {
+        LoadScene($"Level{level}");
+    }
+
+
+    /// <summary>
+    /// Store the selected character index in PlayerPrefs
+    /// </summary>
+    /// <param name="characterIndex"></param>
+    public void SelectCharacter(int characterIndex)
+    {        
+        PlayerPrefs.SetInt("SelectedCharacter", characterIndex);
+        PlayerPrefs.Save();
+        
+        LoadScene("Menu");
+    }
+
+    private void LoadScene(string sceneName)
+    {
+        if (EventSystem.current != null)
+        {
+            EventSystem.current.SetSelectedGameObject(null);
+        }
+
+        SceneManager.LoadScene(sceneName);
+    }
+
+
+}
