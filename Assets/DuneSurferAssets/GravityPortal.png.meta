@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: b8747dff019bd444a96bd4e8b7ee816a
+guid: 6dbcd104e3d44404c97b642b9693eb91
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3809319501612307451
-    second: Snowboarding Dino_0
+      213: -6796782013344273986
+    second: GravityPortal_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -102,13 +102,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Snowboarding Dino_0
+      name: GravityPortal_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 497
-        height: 331
+        width: 1024
+        height: 1536
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -117,8 +117,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: bf3d19177eb6dd430800000000000000
-      internalID: 3809319501612307451
+      spriteID: eb9a9de05cafca1a0800000000000000
+      internalID: -6796782013344273986
       vertices: []
       indices: 
       edges: []
@@ -137,7 +137,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Snowboarding Dino_0: 3809319501612307451
+      GravityPortal_0: -6796782013344273986
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

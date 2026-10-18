@@ -28,6 +28,13 @@ public class PlayerController : MonoBehaviour
 
     public bool CanControlPlayer { get => canControlPlayer; set => canControlPlayer = value; }
 
+    public bool HasKey { get; private set; }
+
+    public void CollectKey()
+    {
+        HasKey = true;
+    }
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -82,7 +89,14 @@ public class PlayerController : MonoBehaviour
 
     void ActivateSelectedCharacter()
     {
-        Transform characters = transform.GetChild(0);
+        Transform characters = transform.Find("Characters");
+
+        if (characters == null || characters.childCount == 0)
+        {
+            Debug.LogError("Player needs a Characters child containing the character visuals.", this);
+            return;
+        }
+
         int selectedCharacter = PlayerPrefs.GetInt("SelectedCharacter", 0);
 
         selectedCharacter = Mathf.Clamp(selectedCharacter, 0, characters.childCount - 1);
@@ -91,9 +105,6 @@ public class PlayerController : MonoBehaviour
         {
             characters.GetChild(i).gameObject.SetActive(i == selectedCharacter);
         }
-
-        PlayerPrefs.SetInt("SelectedCharacter", selectedCharacter);
-        PlayerPrefs.Save();
     }
 
 

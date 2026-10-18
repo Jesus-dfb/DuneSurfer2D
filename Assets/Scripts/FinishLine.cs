@@ -10,31 +10,49 @@ public class FinishLine : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Player") && !hasFinished)
+        if (hasFinished)
         {
-            hasFinished = true;
-            PlayerController playerController = other.GetComponent<PlayerController>();
-            if (playerController == null)
-            {
-                playerController = other.GetComponentInParent<PlayerController>();
-            }
-
-            if (playerController != null)
-            {
-                playerController.CanControlPlayer = false;
-            }
-
-            Debug.Log("Player has crossed the finish line!");
-            if (finishEffect != null)
-            {
-                finishEffect.Play(); // Play the finish effect particles
-            }
-
-            Invoke(nameof(NextLevel), reloadDelay); // Reload the scene after the specified delay
-
+            return;
         }
+
+        Rigidbody2D body = other.attachedRigidbody;
+
+        if (body == null || !body.CompareTag("Player"))
+        {
+            return;
+        }
+
+        if (!body.TryGetComponent(out PlayerController player))
+        {
+            return;
+        }
+
+        hasFinished = true;
+        player.CanControlPlayer = false;
+
+        bool requiresKey = SceneManager.GetActiveScene().name == "Level3";
+
+        if (requiresKey && !player.HasKey)
+        {
+            Debug.Log("Necesitas la llave para completar este nivel.");
+                Invoke(nameof(RestartLevel), reloadDelay);
+            return;
+        }
+
+        Debug.Log("Player has crossed the finish line!");
+
+        if (finishEffect != null)
+        {
+            finishEffect.Play();
+        }
+
+        Invoke(nameof(NextLevel), reloadDelay);
     }
 
+    void RestartLevel()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
     void NextLevel()
     {
         if (!TryGetCurrentLevelNumber(out int currentLevel))

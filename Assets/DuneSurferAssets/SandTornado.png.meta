@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 8c8ca6d336b2f5048986213f579244e3
+guid: 6ce72b689926cef4685755f5de8c321d
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3171247178881647272
-    second: Floor Tile Fill_0
+      213: -451125819499057278
+    second: SandTornado_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -102,13 +102,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Floor Tile Fill_0
+      name: SandTornado_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 256
-        height: 256
+        x: 32
+        y: 15
+        width: 964
+        height: 1490
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -117,8 +117,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 85dbcc72e777df3d0800000000000000
-      internalID: -3171247178881647272
+      spriteID: 28f60c315774db9f0800000000000000
+      internalID: -451125819499057278
       vertices: []
       indices: 
       edges: []
@@ -137,7 +137,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Floor Tile Fill_0: -3171247178881647272
+      SandTornado_0: -451125819499057278
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
